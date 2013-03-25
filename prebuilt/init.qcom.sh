@@ -72,7 +72,7 @@ case "$usbchgdisabled" in
     "") ;; #Do nothing here
     * )
     case $target in
-        "msm8660_surf" | "msm8660_csfb" | "hdk_8x60" | "i_atnt" | "i_skt" | "i_vzw" | "i_dcm" | "p930" | "su640" | "vs920" )
+        "msm8660_surf" | "msm8660_csfb" | "hdk_8x60" | "i_atnt" | "i_skt" | "i_vzw" | "i_lgu" | "i_dcm" | "p930" | "su640" | "vs920" | "lu6200" )
 		#platform.team@lge.com
         echo "$usbchgdisabled" > /sys/module/pmic8058_charger/parameters/disabled
         echo "$usbchgdisabled" > /sys/module/smb137b/parameters/disabled

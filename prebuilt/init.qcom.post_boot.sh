@@ -29,7 +29,7 @@
 target=`getprop ro.product.device`
 case "$target" in
 #platform.team@lge.com
-    "msm8660_surf" | "msm8660_csfb" | "hdk_8x60" | "i_atnt" | "i_skt" | "i_vzw" | "i_dcm" | "p930" | "su640" | "vs920" )
+    "msm8660_surf" | "msm8660_csfb" | "hdk_8x60" | "i_atnt" | "i_skt" | "i_vzw" | "i_lgu" | "i_dcm" | "p930" | "su640" | "vs920" | "lu6200" )
 	 echo 1 > /sys/module/rpm_resources/enable_low_power/L2_cache
 	 echo 1 > /sys/module/rpm_resources/enable_low_power/pxo
 	 echo 2 > /sys/module/rpm_resources/enable_low_power/vdd_dig
@@ -63,7 +63,7 @@ esac
 
 # Post-setup services
 case "$target" in
-    "msm8660_surf" | "msm8660_csfb" | "hdk_8x60" | "i_atnt" | "i_skt" | "i_vzw" | "i_dcm" | "p930" | "su640" | "vs920" )
+    "msm8660_surf" | "msm8660_csfb" | "hdk_8x60" | "i_atnt" | "i_skt" | "i_vzw" | "i_lgu" | "i_dcm" | "p930" | "su640" | "vs920" | "lu6200" )
         start mpdecision
         start thermald
     ;;

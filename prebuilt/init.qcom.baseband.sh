@@ -13,4 +13,7 @@ case "$target" in
   "i_vzw" | "vs920" )
 	setprop gsm.version.baseband `strings -n 12 /firmware/image/modem.b05 | grep -o "VS920.*-M8660.*" | head -1`
 	;;
+  "i_lgu" | "lu6200" )
+	setprop gsm.version.baseband `strings -n 12 /firmware/image/modem.b05 | grep -o "LU62.*-M8660.*" | head -1`
+	;;
 esac
